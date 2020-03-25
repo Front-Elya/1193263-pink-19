@@ -1,8 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Эльвира Балашова](https://up.htmlacademy.ru/adaptive/19/user/1193263).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Натали Белоева](https://htmlacademy.ru/profile/id1123699).
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
