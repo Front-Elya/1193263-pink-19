@@ -1,11 +1,37 @@
 .page-main {
-  width: 320px;
   margin: 0 auto;
-  background-color: @deepblue-bgcolor;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 -64px;
-  object-fit: contain;
+}
+
+.page-main__slogan {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 28px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+  font-family: "OpenSans Light", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: @dominate-textcolor;
+
+  &::after {
+    content: "";
+    width: 320px;
+    height: 280px;
+    padding: 0;
+    margin:0;
+    display: block;
+    position: relative;
+    top: 40px;
+    left: -43px;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
 }
 
 .page-main__title {

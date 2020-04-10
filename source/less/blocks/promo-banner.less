@@ -1,21 +1,10 @@
 .promo-banner {
-  width: 320px;
   margin: 0 auto;
-  background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 0 112px;
-  color: @dominate-textcolor;
-}
-
-.promo-banner__slogan {
-  width: 221px;
-  margin: auto;
   padding: 0;
-  padding-top: 14px;
-  font-family: "OpenSans Light", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: @deepblue-bgcolor;
+  color: @dominate-textcolor;
 }
 
 .promo-banner__accessibility {
@@ -33,8 +22,20 @@
   width: 281px;
   display: block;
   margin: 0 auto;
-  margin-top: 365px;  /*возможно, нужно реализовать по-другому*/
   padding: 15px 0;
   color: @dominate-textcolor;
   border-color: #ffffff;
+
+  &:hover {
+    color: @support-textcolor;
+    background-color: @white-bgcolor;
+    border-color: @white-bgcolor;
+  }
+
+  &:active {
+    color: @support-textcolor;
+    opacity: 0.3;
+    background-color: @white-bgcolor;
+    border-color: @white-bgcolor;
+  }
 }

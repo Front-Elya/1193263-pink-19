@@ -5,8 +5,7 @@
   align-items: baseline;
   margin: 0;
   padding: 0;
-  padding-right: 75px;
-  padding-left: 73px;
+  margin-bottom: 35px;
   list-style: none;
 }
 
@@ -17,6 +16,15 @@
   border: 3px solid @main-bgcolor;
   border-radius: 50px;
   text-align: center;
+
+  &:hover {
+     border-color: @black-bgcolor;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+    border-color: @main-bgcolor;
+  }
 }
 
 .social__item svg {
@@ -26,4 +34,5 @@
   bottom: 0;
   right: 0;
   left: 0;
+  fill: @support-bgcolor;
 }

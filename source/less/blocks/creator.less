@@ -1,17 +1,31 @@
 .creator {
+  width: 135px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 25px 96px;
+  padding: 0;
 }
 
 .creator__text {
   line-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.creator__link {
+  &:hover path{
+    fill: @dominate-bgcolor;
+  }
+
+  &:active path {
+    fill: @main-bgcolor;
+  }
 }
 
 .creator__link svg {
   width: 27px;
   height: 34px;
+  fill: @support-bgcolor;
 }
