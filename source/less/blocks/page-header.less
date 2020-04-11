@@ -9,7 +9,15 @@
   margin-top: 22px;
   margin-bottom: 19px;
   margin-left: 20px;
-  fill: @white-bgcolor;
+
+  &:hover path {
+    fill: @support-bgcolor;
+  }
+
+  &:active path {
+    fill: @white-bgcolor;
+    opacity: 0.3;
+  }
 }
 
 .page-header__toggle {
