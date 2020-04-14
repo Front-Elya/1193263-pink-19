@@ -1,7 +1,12 @@
 .competitive-form {
   margin: 0;
   padding: 0;
+  position: relative;
   background-color: @white-bgcolor;
+}
+
+.competitive-form__item {
+  border: 0;
 }
 
 .competitive-form__text {
@@ -9,4 +14,36 @@
   padding: 49px 25px;
   text-align: center;
   line-height: 30px;
+
+  &--explanation {
+    margin: 0;
+    padding: 46px 19px;
+    text-transform: uppercase;
+  }
+
+  &--star {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 30px;
+    color: @support-textcolor;
+  }
+}
+
+.competitive-form__button {
+  width: 276px; /*подумать в дальнейшем над реализацией*/
+  margin: 0;
+  padding: 0;
+  margin-left: 22px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-family: "OpenSans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @dominate-textcolor;
+  border: 0;
+  border-radius: 4px;
+  background-color: @formbutton-color;
 }

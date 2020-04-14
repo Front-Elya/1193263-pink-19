@@ -1,14 +1,137 @@
 .upload-photo {
   margin: 0 auto;
   padding: 0;
+  margin: 20px 20px 41px 18px;
   background-color: @main-bgcolor;
 }
 
 .upload-photo__image {
-  padding: 0;
-  margin: 20px 20px 0 18px;
+  margin-bottom: 42px;
 }
 
 .upload-photo__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 39px;
   list-style: none;
+}
+
+.upload-photo__item {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.upload-photo__icon {
+  display: block;
+  fill: @dominate-bgcolor;
+  opacity: 0.3;
+
+  &--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  &--color {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--active {
+    fill: @support-bgcolor;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @support-bgcolor;
+    opacity: 1;
+  }
+
+  &:hover {
+    fill: @dominate-bgcolor;
+    opacity: 0.5;
+  }
+}
+
+.upload-photo__rangelist {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style: none;
+}
+
+.upload-photo__rangeitem{
+  display: none;
+}
+
+.upload-photo__rangeitem--active {
+  display: block;
+  position: relative;
+  margin-bottom: 73px;
+}
+
+.upload-photo__buttons {
+  &::before{
+    content: "";
+    display: block;
+    position: relative;
+    top: -38px;
+    height: 2px;
+    margin-left: -18px;
+    margin-right: -20px;
+    background-color: rgba(@main-textcolor, 0.1);
+  }
+}
+
+.upload-photo__button {
+  width: 281px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0;
+  box-sizing: border-box;
+
+  &--post {
+    margin-bottom: 12px;
+    color: @support-textcolor;
+    border-color: @support-textcolor;
+
+    &:hover {
+      color: @dominate-textcolor;
+      border-color: @support-textcolor;
+      background-color: @support-bgcolor;
+    }
+
+    &:active {
+      color: rgba(@dominate-textcolor, 0.3);
+      border-color: @support-textcolor;
+      background-color: @support-bgcolor;
+    }
+  }
+
+  &--cancel {
+    color: rgba(@main-textcolor, 0.1);
+
+    &:hover {
+      color: rgba(@main-textcolor, 0.3);
+      border-color: rgba(@main-textcolor, 0.3);
+    }
+
+    &:active {
+      color: rgba(@dominate-textcolor, 0.3);
+      background-color: rgba(@dominate-bgcolor, 0.3);
+      border-color: transparent;
+    }
+  }
 }

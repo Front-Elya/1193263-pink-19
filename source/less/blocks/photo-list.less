@@ -30,6 +30,22 @@
 .photo-list__link--panorama {
   margin-right: -20px;
   margin-left: -20px;
+  position: relative;
+
+  &::after {
+    content: "Панорама дня";
+    position: absolute;
+    right: 20px;
+    width: 140px;
+    height: 36px;
+    background-color: @support-bgcolor;
+    text-transform: uppercase;
+    font-family: "OpenSans Bold", sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: @dominate-textcolor;
+  }
 }
 
 .photo-list__photo {
@@ -72,8 +88,10 @@
 .photo-list__button {
   margin: 0;
   padding: 0;
+  margin-right: 19px;
   border: 0;
   cursor: pointer;
+  fill: @support-bgcolor;
 }
 
 .photo-list__count {

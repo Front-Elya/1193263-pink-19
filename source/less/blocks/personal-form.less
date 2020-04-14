@@ -1,0 +1,50 @@
+.personal-form {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-right: 22px;
+  padding-left: 22px;
+
+  &--contacts {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.personal-form__label {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @support-textcolor;
+  text-transform: uppercase;
+}
+
+.personal-form__input {
+  min-height: 59px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid @border-color;
+  border-radius: 2%;
+  outline: none;
+
+  &:hover {
+    border: 2px solid @black-bgcolor;
+  }
+
+  &:active {
+    border: 2px solid @support-bgcolor;
+  }
+
+  &:focus {
+    border: 2px solid @support-bgcolor;
+  }
+}
