@@ -29,19 +29,19 @@
     position: relative;
     background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
-
-    &::after {
-      content: "хит";
-      width: 24px;
-      height: 26px;
-      position: absolute;
-      top: 12px;
-      left: 10px;
-      transform: rotate(-45deg);
-      font-family: "OpenSans Light", sans-serif;
-      font-weight: 300;
-    }
   }
+}
+
+.table-list__sticker {
+  width: 24px;
+  height: 26px;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+  font-family: "OpenSans Light", sans-serif;
+  font-weight: 300;
 }
 
 .table-list__header {
@@ -65,8 +65,8 @@
   box-sizing: border-box;
   font-family: "OpenSans", sans-serif;
   color: @main-textcolor;
-  font-weight: 300;
   border: 2px solid @border-color;
+  background-color: @white-bgcolor;
 }
 
 .table-list__wrapper {

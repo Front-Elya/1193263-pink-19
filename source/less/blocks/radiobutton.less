@@ -15,35 +15,38 @@
 
 .radiobutton__label {
   margin-left: 70px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 37px;
+    height: 36px;
+    position: absolute;
+    left: -71px;
+    border: 3px solid @border-color;
+    border-radius: 50px;
+    background-color: @white-bgcolor;
+    cursor: pointer;
+
+    &:hover {
+      border-color: @black-bgcolor;
+    }
+
+    &:active {
+      border-color: @support-bgcolor;
+    }
+  }
 }
 
-.radiobutton__button {
-  width: 37px;
-  height: 36px;
-  position: absolute;
-  left: -3px;
-  border: 3px solid @border-color;
-  border-radius: 50px;
-  background-color: @white-bgcolor;
-  cursor: pointer;
-
-  &:hover {
-    border-color: @black-bgcolor;
-  }
-
-  &:active {
-    border-color: @support-bgcolor;
-  }
-}
-
-.radiobutton__input:checked + .radiobutton__button {
+.radiobutton__input:checked + .radiobutton__label {
   &::after {
     content: "";
     width: 15px;
     height: 15px;
     position: absolute;
+    z-index: 2;
     top: 10px;
-    right: 11px;
+    left: -60px;
     border-radius: 50px;
     background-color: @support-bgcolor;
   }

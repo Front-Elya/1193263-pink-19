@@ -5,6 +5,20 @@
   background-color: @white-bgcolor;
 }
 
+.competitive-form__title {
+  margin: 0 auto;
+  padding: 36px 46px 87px;
+  font-family: "OpenSans Light", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: @dominate-textcolor;
+  line-height: 24px;
+  text-align: center;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -64px;
+}
+
 .competitive-form__item {
   border: 0;
 }
@@ -14,27 +28,28 @@
   padding: 49px 25px;
   text-align: center;
   line-height: 30px;
+}
 
-  &--explanation {
-    margin: 0;
-    padding: 46px 19px;
-    text-transform: uppercase;
-  }
+.competitive-form__explanation {
+  margin: 0;
+  padding: 46px 19px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  &--star {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 30px;
-    color: @support-textcolor;
-  }
+.competitive-form__asterisk {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: @support-textcolor;
 }
 
 .competitive-form__button {
+  display: block;
   width: 276px; /*подумать в дальнейшем над реализацией*/
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  margin-left: 22px;
   padding-top: 16px;
   padding-bottom: 15px;
   text-align: center;
@@ -46,4 +61,17 @@
   border: 0;
   border-radius: 4px;
   background-color: @formbutton-color;
+
+  &:hover {
+    background-color: @fbhover-color;
+  }
+
+  &:active {
+    color: rgba(@dominate-textcolor, 0.3);
+    background-color: @fbhover-color;
+  }
+}
+
+.competitive-form__button:disabled {
+  background-color: @disabled-color;
 }

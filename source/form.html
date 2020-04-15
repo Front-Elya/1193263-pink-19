@@ -38,9 +38,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title page-main__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
       <section class="competitive-form">
-        <h2 class="visually-hidden">Конкурсная форма</h2>
+        <h1 class="visually-hidden">Конкурсная форма</h1>
+        <p class="competitive-form__title">Конкурс на самое безбашенное путешествие с Пинк</p>
         <p class="competitive-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
         <form method="POST" action="https://echo.htmlacademy.ru">
           <fieldset class="competitive-form__item personal-form">
@@ -57,40 +57,28 @@
             <p class="filter-form__title">Ваши безбашенные достижения в путешествии</p>
             <ul class="filter-form__list">
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="sharkselfie">
                 <input class="checkbox__input" id="sharkselfie" type="checkbox" name="sharkselfie" checked>
-                <span class="checkbox__box"></span>
-                Сделал селфи с акулой</label>
+                <label class="checkbox__label" for="sharkselfie">Сделал селфи с акулой</label>
               </li>
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="sunburn">
                 <input class="checkbox__input" id="sunburn" type="checkbox" name="sunburn" checked>
-                <span class="checkbox__box"></span>
-                Обгорел на пляже</label>
+                <label class="checkbox__label" for="sunburn">Обгорел на пляже</label>
               </li>
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="chucknorris">
                 <input class="checkbox__input" id="chucknorris" type="checkbox" name="chucknorris">
-                <span class="checkbox__box"></span>
-                Видел Чака Норриса</label>
+                <label class="checkbox__label" for="chucknorris">Видел Чака Норриса</label>
               </li>
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="souvenirs">
                 <input class="checkbox__input" id="souvenirs" type="checkbox" name="souvenirs">
-                <span class="checkbox__box"></span>
-                Накупил сувениров</label>
+                <label class="checkbox__label" for="souvenirs">Накупил сувениров</label>
               </li>
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="tower">
                 <input class="checkbox__input" id="tower" type="checkbox" name="tower" checked>
-                <span class="checkbox__box"></span>
-                Удержал башню</label>
+                <label class="checkbox__label" for="tower">Удержал башню</label>
               </li>
               <li class="filter-form__item checkbox">
-                <label class="checkbox__label" for="hotelrout">
                 <input class="checkbox__input" id="hotelrout" type="checkbox" name="hotelrout">
-                <span class="checkbox__box "></span>
-                Разгромил отель</label>
+                <label class="checkbox__label" for="hotelrout">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
@@ -106,22 +94,16 @@
             <p class="filter-form__title">С каким приложением путешествовали?</p>
             <ul class="filter-form__list">
               <li class="filter-form__item radiobutton">
-                <label class="radiobutton__label" for="iOS">
                 <input class="radiobutton__input" id="iOS" type="radio" name="application-store" checked>
-                <span class="radiobutton__button"></span>
-                Pink для iOS</label>
+                <label class="radiobutton__label" for="iOS">Pink для iOS</label>
               </li>
               <li class="filter-form__item radiobutton">
-                <label class="radiobutton__label" for="android">
                 <input class="radiobutton__input" id="android" type="radio" name="application-store">
-                <span class="radiobutton__button"></span>
-                Pink на Android</label>
+                <label class="radiobutton__label" for="android">Pink на Android</label>
               </li>
               <li class="filter-form__item radiobutton">
-                <label class="radiobutton__label" for="windows">
                 <input class="radiobutton__input" id="windows" type="radio" name="application-store">
-                <span class="radiobutton__button"></span>
-                Windows Phone</label>
+                <label class="radiobutton__label" for="windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
@@ -130,8 +112,8 @@
             <textarea class="comment-form__text" id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
           <button class="competitive-form__button" type="submit">Отправить форму</button>
-          <p class="competitive-form__text competitive-form__text--explanation">
-            <sup class="competitive-form__text competitive-form__text--star">*</sup>
+          <p class="competitive-form__explanation">
+            <sup class="competitive-form__asterisk">*</sup>
             — обязательные поля
           </p>
         </form>

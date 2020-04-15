@@ -1,13 +1,46 @@
 .promo-banner {
   margin: 0 auto;
   padding: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   background-color: @deepblue-bgcolor;
   color: @dominate-textcolor;
 }
 
+.promo-banner__slogan {
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 28px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 30px;
+  font-family: "OpenSans Light", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: @dominate-textcolor;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -68px;
+
+  &::after {
+    content: "";
+    width: 320px;
+    height: 314px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    top: 28px;
+    left: -40px;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+}
+
 .promo-banner__accessibility {
+  padding: 0;
+  margin: 0;
   font-family: "OpenSans Light", sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -22,6 +55,8 @@
   width: 281px;
   display: block;
   margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 15px 0;
   color: @dominate-textcolor;
   border-color: #ffffff;

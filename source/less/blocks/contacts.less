@@ -49,6 +49,16 @@
   line-height: 30px;
   text-decoration: none;
   color: @support-textcolor;
+
+  &:hover {
+    color: @black-textcolor;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(@main-textcolor, 0.3);
+    text-decoration: none;
+  }
 }
 
 .contacts__map iframe {
