@@ -27,8 +27,8 @@
 
 .upload-photo__icon {
   display: block;
-  fill: @dominate-bgcolor;
-  opacity: 0.3;
+  border: 0;
+  outline: none;
 
   &--crop {
     width: 44px;
@@ -44,15 +44,18 @@
     width: 32px;
     height: 32px;
   }
-}
 
-.upload-photo__icon svg {
-  &:active {
+  &--active svg {
     fill: @support-bgcolor;
     opacity: 1;
   }
 
-  &:hover {
+  &:active svg {
+    fill: @support-bgcolor;
+    opacity: 1;
+  }
+
+  &:hover svg {
     fill: @dominate-bgcolor;
     opacity: 0.5;
   }

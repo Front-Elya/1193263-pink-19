@@ -19,14 +19,14 @@
     border-radius: 2px;
     background-color: @white-bgcolor;
     cursor: pointer;
+  }
 
-    &:hover {
-      border-color: @black-bgcolor;
-    }
+  &:hover::before {
+    border-color: @black-bgcolor;
+  }
 
-    &:active {
-      border-color: @support-bgcolor;
-    }
+  &:active::before {
+    border-color: @support-bgcolor;
   }
 }
 
