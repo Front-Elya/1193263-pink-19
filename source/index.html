@@ -17,8 +17,8 @@
           </g>
         </svg>
       </a>
-      <button class="page-header__toggle" type="button">Открыть меню</button>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button" aria-label="Закрыть меню"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -38,20 +38,19 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
-      <p class="page-main__slogan">Взгляните на жизнь иначе!</p>
       <section class="promo-banner">
-        <h2 class="visually-hidden">Скачать приложения Пинк</h2>
+        <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
+        <p class="promo-banner__slogan">Взгляните на жизнь иначе!</p>
         <a class="promo-banner__button button" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
         <ul class="promo-banner__list store-list">
-          <li class="store-list__item store-list__item--appstore">
-            <a href="https://apps.apple.com/" aria-label="Apple"></a>
+          <li class="store-list__item">
+            <a class="store-list__link store-list__link--appstore" href="https://apps.apple.com/" aria-label="Apple"></a>
           </li>
-          <li class="store-list__item store-list__item--googlestore">
-            <a href="https://store.google.com/" aria-label="Android"></a>
+          <li class="store-list__item">
+            <a class="store-list__link store-list__link--googlestore" href="https://store.google.com/" aria-label="Android"></a>
           </li>
-          <li class="store-list__item store-list__item--windowstore">
-            <a href="https://www.microsoft.com/ru-ru/store/apps" aria-label="Windows"></a>
+          <li class="store-list__item">
+            <a class="store-list__link store-list__link--windowstore" href="https://www.microsoft.com/ru-ru/store/apps" aria-label="Windows"></a>
           </li>
         </ul>
         <p class="promo-banner__accessibility">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -87,19 +86,11 @@
               <h4 class="reviews__name">Николай Петров</h4>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="reviews__item slider__item">
-              <h4 class="reviews__name">Николай Петров</h4>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-            <li class="reviews__item slider__item">
-              <h4 class="reviews__name">Николай Петров</h4>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
           </ul>
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button" aria-label="Первый слайд">1</button>
-            <button class="slider__toggle" type="button" aria-label="Второй слайд">2</button>
-            <button class="slider__toggle" type="button" aria-label="Последний слайд">3</button>
+            <button class="slider__toggle slider__toggle--active" type="button" aria-label="Первый слайд"></button>
+            <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
+            <button class="slider__toggle" type="button" aria-label="Последний слайд"></button>
           </p>
         </div>
       </section>
@@ -107,38 +98,127 @@
         <h2 class="visually-hidden">Опции и тарифы</h2>
         <div class="options__wrapper slider">
           <table class="options__table table-list">
-            <tr class="table-list__title">
-              <th class="table-list__tariff ">База</th>
-              <th class="table-list__tariff table-list__tariff--hit">Стандарт 3,99 USD</th>
-              <th class="table-list__tariff">Анлим</th>
+            <tr class="table-list__item">
+              <th class="table-list__tariff">
+                <p class="table-list__header">База</p>
+              </th>
+              <th class="table-list__tariff table-list__tariff--hit">
+                <p class="table-list__header">Стандарт</p>
+                <p class="table-list__price">3,99 USD</p>
+                <span class="table-list__sticker"><p class="table-list__sticker-title">Хит</p></span>
+              </th>
+              <th class="table-list__tariff">
+                <p class="table-list__header">Анлим</p>
+              </th>
             </tr>
             <tr class="table-list__item">
-              <td class="table-list__decoration table-list__decoration--yes">Розовый фильтр</td>
-              <td class="table-list__decoration table-list__decoration--yes">Розовый фильтр</td>
-              <td class="table-list__decoration table-list__decoration--yes">Розовый фильтр</td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Розовый фильтр</p>
+                  <span class="table-list__checkbox table-list__checkbox--no">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27" height="26" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                      <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Розовый фильтр</p>
+                  <span class="table-list__checkbox table-list__checkbox--yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Розовый фильтр</p>
+                  <span class="table-list__checkbox table-list__checkbox--yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
             </tr>
             <tr class="table-list__item">
-              <td class="table-list__decoration table-list__decoration--no">Смайлики</td>
-              <td class="table-list__decoration table-list__decoration--yes">Смайлики</td>
-              <td class="table-list__decoration table-list__decoration--yes">Смайлики</td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Смайлики</p>
+                  <span class="table-list__checkbox table-list__checkbox--no">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27" height="26" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                      <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Смайлики</p>
+                  <span class="table-list__checkbox table-list__checkbox--yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Смайлики</p>
+                  <span class="table-list__checkbox table-list__checkbox--yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
             </tr>
             <tr class="table-list__item">
-              <td class="table-list__decoration table-list__decoration--no">Комментарии</td>
-              <td class="table-list__decoration table-list__decoration--no">Комментарии</td>
-              <td class="table-list__decoration table-list__decoration--yes">Комментарии</td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Комментарии</p>
+                  <span class="table-list__checkbox table-list__checkbox--no">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27" height="26" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                      <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Комментарии</p>
+                  <span class="table-list__checkbox table-list__checkbox--no">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27" height="26" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+                      <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
+              <td class="table-list__decoration">
+                <div class="table-list__wrapper">
+                  <p class="table-list__filter">Комментарии</p>
+                  <span class="table-list__checkbox table-list__checkbox--yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </span>
+                </div>
+              </td>
             </tr>
           </table>
           <p class="options__toggles slider__toggles">
-            <button class="slider__toggle" type="button" aria-label="Первый слайд">1</button>
-            <button class="slider__toggle" type="button" aria-label="Второй слайд">2</button>
-            <button class="slider__toggle" type="button" aria-label="Последний слайд">3</button>
+            <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
+            <button class="slider__toggle slider__toggle--active" type="button" aria-label="Второй слайд"></button>
+            <button class="slider__toggle" type="button" aria-label="Последний слайд"></button>
           </p>
         </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
-          <p class="contacts__title">Остались вопросы?Свяжитесь с нами!</p>
+          <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
           <ul class="contacts__list">
             <li class="contacts__item">
               <h3 class="contacts__name">Звоните:</h3>
@@ -156,7 +236,7 @@
         </div>
         <div class="contacts__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003113!2d30.320858716130473!3d59.93871916905416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585522976604!5m2!1sru!2sru"
-          width="320" height="645"  allowfullscreen="" aria-hidden="false" tabindex="0" name="Санкт-Петербург улица Большая Конюшенная, 19/8"></iframe>
+          width="320" height="300"  allowfullscreen="" aria-hidden="false" tabindex="0" name="Санкт-Петербург улица Большая Конюшенная, 19/8"></iframe>
         </div>
       </section>
     </main>

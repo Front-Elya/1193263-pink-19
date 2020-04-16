@@ -1,0 +1,105 @@
+.table-list {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  margin-left: -254px;
+  color: @dominate-textcolor;
+  background-color: @main-bgcolor;
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+
+.table-list__tariff {
+  min-width: 276px;
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 21px;
+  position: relative;
+  text-align: center;
+  background-color: @dominate-bgcolor;
+  font-family: "OpenSans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid @border-color;
+  border-top: 0;
+}
+
+.table-list__sticker {
+  width: 74px;
+  height: 73px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+}
+
+.table-list__sticker-title {
+  width: 24px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+  font-family: "OpenSans Light", sans-serif;
+  font-weight: 300;
+}
+
+.table-list__header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.table-list__price {
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans Light", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.table-list__decoration {
+  margin: 0;
+  padding: 22px;
+  box-sizing: border-box;
+  font-family: "OpenSans", sans-serif;
+  color: @main-textcolor;
+  border: 2px solid @border-color;
+  background-color: @white-bgcolor;
+}
+
+.table-list__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table-list__filter {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 30px;
+}
+
+.table-list__checkbox {
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 30px;
+
+  &--yes {
+    width: 31px;
+    height: 21px;
+    fill: @check-color;
+  }
+
+  &--no {
+    width: 27px;
+    height: 26px;
+    fill: @cross-color;
+  }
+}

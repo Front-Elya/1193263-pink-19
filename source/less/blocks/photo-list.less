@@ -30,6 +30,22 @@
 .photo-list__link--panorama {
   margin-right: -20px;
   margin-left: -20px;
+  position: relative;
+}
+
+.photo-list__sticker {
+  position: absolute;
+  right: 20px;
+  width: 140px;
+  height: 36px;
+  padding-top: 5px;
+  background-color: @support-bgcolor;
+  text-transform: uppercase;
+  font-family: "OpenSans Bold", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: @dominate-textcolor;
 }
 
 .photo-list__photo {
@@ -70,10 +86,15 @@
 }
 
 .photo-list__button {
+  width: 13px;
+  height: 12px;
   margin: 0;
   padding: 0;
+  margin-right: 19px;
   border: 0;
   cursor: pointer;
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
 }
 
 .photo-list__count {
