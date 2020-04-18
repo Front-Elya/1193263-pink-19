@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  min-height: 46px;
   margin: 0 auto;
   padding: 0;
 }
@@ -25,5 +26,19 @@
 
   &:active {
     fill: @main-bgcolor;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .creator {
+    width: 140px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .creator {
+    width: 150px;
+    margin-right: 0;
   }
 }

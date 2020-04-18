@@ -1,8 +1,20 @@
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   text-align: center;
   text-transform: uppercase;
   line-height: 32px;
+  background-color: @dominate-bgcolor;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    text-transform: none;
+  }
 }
 
 .main-nav__toggle {
@@ -15,6 +27,16 @@
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
 }
 
 .main-nav--closed .main-nav__toggle {

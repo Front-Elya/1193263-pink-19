@@ -18,6 +18,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
   background-color: @main-bgcolor;
 
   &--panorama {
@@ -95,6 +96,7 @@
   cursor: pointer;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .photo-list__count {
@@ -106,4 +108,65 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @support-textcolor;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .photo-list__item {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .photo-list__item--panorama {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .photo-list__count {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+  }
+
+  .photo-list__button {
+    position: absolute;
+    bottom: 22px;
+    left: auto;
+    right: 20px;
+  }
+
+  .photo-list__item--panorama .photo-list__count {
+    position: absolute;
+    top: 160px;
+    left: auto;
+    right: 59px;
+  }
+
+  .photo-list__item--panorama .photo-list__button {
+    position: absolute;
+    top: 166px;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-list {
+    margin-right: 130px;
+    margin-left: 130px;
+  }
+
+  .photo-list__item {
+    margin-bottom: 54px;
+  }
+
+  .photo-list__item--panorama {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }

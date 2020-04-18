@@ -26,16 +26,21 @@
 }
 
 .table-list__sticker {
-  width: 74px;
-  height: 73px;
+  height: 0;
+  width: 140px;
+  border-bottom: 35px solid @support-bgcolor;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/bg-hit.svg");
-  background-repeat: no-repeat;
+  top: 10px;
+  right: 170px;
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+  font-family: "OpenSans Light", sans-serif;
+  font-weight: 300;
 }
 
-.table-list__sticker-title {
+/*.table-list__sticker-title {
   width: 24px;
   height: 26px;
   position: absolute;
@@ -45,7 +50,7 @@
   text-transform: uppercase;
   font-family: "OpenSans Light", sans-serif;
   font-weight: 300;
-}
+}*/
 
 .table-list__header {
   margin: 0;

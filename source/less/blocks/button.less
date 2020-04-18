@@ -1,6 +1,4 @@
 .button {
-  width: 281px;
-  display: block;
   font-family: "OpenSans Bold", sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -9,4 +7,11 @@
   border: solid 3px;
   border-radius: 50px;
   background-color: transparent;
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    font-size: 21px;
+    line-height: 18px;
+  }
 }

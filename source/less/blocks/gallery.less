@@ -6,7 +6,8 @@
 
 .gallery__title {
   margin: 0 auto;
-  padding: 36px 76px 87px;
+  padding: 95px 76px 87px;
+  margin-top: -70px;
   font-family: "OpenSans Light", sans-serif;
   font-weight: 300;
   font-size: 24px;
@@ -15,7 +16,6 @@
   text-align: center;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -64px;
 }
 
 .gallery__text {
@@ -42,4 +42,52 @@
 .gallery__list {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__title {
+    margin: 0;
+    padding: 81px 156px 150px;
+    font-family: "OpenSans Light", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 50px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-x: -300px;
+    background-position-y: -115px;
+  }
+
+  .gallery__text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .gallery__text:first-child {
+    padding: 100px 110px 80px;
+  }
+
+  .gallery__text:last-child {
+    padding: 74px 120px 72px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__title {
+    margin: 0;
+    padding: 74px 426px 111px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-x: -300px;
+    background-position-y: -115px;
+  }
+
+  .gallery__text:first-child {
+    padding: 100px 300px 92px;
+  }
+
+  .gallery__text:last-child {
+    padding: 68px 391px 69px;
+  }
 }

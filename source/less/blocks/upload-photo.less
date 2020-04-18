@@ -27,22 +27,19 @@
 
 .upload-photo__icon {
   display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
   border: 0;
   outline: none;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
 
-  &--crop {
-    width: 44px;
-    height: 44px;
-  }
-
-  &--color {
-    width: 48px;
-    height: 43px;
-  }
-
-  &--contrast {
-    width: 32px;
-    height: 32px;
+  .svg {
+    position: absolute;
+    margin: auto;
+    padding: 0;
   }
 
   &--active svg {

@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  min-height: 46px;
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
@@ -35,4 +36,18 @@
   right: 0;
   left: 0;
   fill: @support-bgcolor;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    width: 150px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__list {
+    width: 200px;
+    margin-bottom: 0;
+  }
 }
