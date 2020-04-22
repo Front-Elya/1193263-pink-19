@@ -1,16 +1,15 @@
 .page-footer {
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 75px 30px 73px;
   background-color: @white-bgcolor;
 }
 
 .page-footer__logo {
   display: block;
-  min-height: 46px;
+  width: 147px;
   margin: 0 auto;
   padding: 0;
   margin-bottom: 20px;
-  margin-left: 10px;
 
   &:hover path {
     fill: @support-bgcolor;
@@ -38,15 +37,6 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 105px 130px 74px;
-    position: relative;
-  }
-
-  .page-footer__logo {
-    margin-bottom: 0;
-    margin-left: 0;
   }
 }

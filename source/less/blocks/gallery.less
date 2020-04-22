@@ -5,38 +5,38 @@
 }
 
 .gallery__title {
-  margin: 0 auto;
-  padding: 95px 76px 87px;
+  margin: 0;
+  padding: 95px 0 87px;
   margin-top: -70px;
-  font-family: "OpenSans Light", sans-serif;
-  font-weight: 300;
-  font-size: 24px;
-  color: @dominate-textcolor;
-  line-height: 24px;
-  text-align: center;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  p {
+    width: 168px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "OpenSans Light", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: @dominate-textcolor;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .gallery__text {
+  width: 245px;
+  margin: 56px auto;
+  padding: 0;
   text-align: center;
   line-height: 30px;
-  padding: 0;
-  margin: 0;
-}
-
-.gallery__text:first-child {
-  padding-left: 40px;
-  padding-right: 39px;
-  padding-top: 28px;
-  padding-bottom: 30px;
 }
 
 .gallery__text:last-child {
-  padding-left: 32px;
-  padding-right: 35px;
-  padding-top: 28px;
-  padding-bottom: 48px;
+  width: 253px;
+  margin: 0 auto;
+  padding: 49px 0;
 }
 
 .gallery__list {
@@ -46,48 +46,34 @@
 
 @media (min-width: @tablet-width) {
   .gallery__title {
-    margin: 0;
-    padding: 81px 156px 150px;
-    font-family: "OpenSans Light", sans-serif;
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 50px;
+    padding: 130px 0 150px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position-x: -300px;
-    background-position-y: -115px;
+
+    p {
+      width: 348px;
+      font-size: 50px;
+      line-height: 50px;
+    }
   }
 
   .gallery__text {
-    text-align: center;
+    width: 440px;
+    margin: 100px auto 80px;
     font-size: 18px;
     line-height: 30px;
-  }
-
-  .gallery__text:first-child {
-    padding: 100px 110px 80px;
-  }
-
-  .gallery__text:last-child {
-    padding: 74px 120px 72px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gallery__title {
-    margin: 0;
-    padding: 74px 426px 111px;
+    padding: 150px 0 111px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position-x: -300px;
-    background-position-y: -115px;
   }
 
-  .gallery__text:first-child {
-    padding: 100px 300px 92px;
-  }
-
-  .gallery__text:last-child {
-    padding: 68px 391px 69px;
+  .gallery__text {
+    width: 568px;
+    margin: 100px auto 92px;
   }
 }
