@@ -18,32 +18,28 @@
   position: relative;
   text-align: center;
   background-color: @dominate-bgcolor;
-  font-family: "OpenSans Bold", sans-serif;
+  font-family: "OpenSans Bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   border: 2px solid @border-color;
   border-top: 0;
+
+  &--hit {
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .table-list__sticker {
-  width: 74px;
-  height: 73px;
+  height: 35px;
+  width: 140px;
+  background-color: @support-bgcolor;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("../img/bg-hit.svg");
-  background-repeat: no-repeat;
-}
-
-.table-list__sticker-title {
-  width: 24px;
-  height: 26px;
-  position: absolute;
-  top: 0;
-  left: 10px;
+  top: 10px;
+  right: 170px;
   transform: rotate(-45deg);
   text-transform: uppercase;
-  font-family: "OpenSans Light", sans-serif;
+  font-family: "OpenSans Light", "Arial", sans-serif;
   font-weight: 300;
 }
 
@@ -56,7 +52,7 @@
 .table-list__price {
   margin: 0;
   padding: 0;
-  font-family: "OpenSans Light", sans-serif;
+  font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
@@ -66,7 +62,7 @@
   margin: 0;
   padding: 22px;
   box-sizing: border-box;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   color: @main-textcolor;
   border: 2px solid @border-color;
   background-color: @white-bgcolor;

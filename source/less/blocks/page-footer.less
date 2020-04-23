@@ -1,15 +1,15 @@
 .page-footer {
-  margin: 0;
-  padding: 20px 70px 30px;
+  margin: 0 auto;
+  padding: 20px 75px 30px 73px;
   background-color: @white-bgcolor;
 }
 
 .page-footer__logo {
   display: block;
+  width: 147px;
   margin: 0 auto;
   padding: 0;
   margin-bottom: 20px;
-  margin-left: 10px;
 
   &:hover path {
     fill: @support-bgcolor;
@@ -17,5 +17,26 @@
 
   &:active path {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 20px 50px;
+    position: relative;
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 105px 130px 74px;
   }
 }

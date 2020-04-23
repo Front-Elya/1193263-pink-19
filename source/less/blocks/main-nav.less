@@ -1,15 +1,20 @@
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   text-align: center;
   text-transform: uppercase;
   line-height: 32px;
+  background-color: @dominate-bgcolor;
 }
 
 .main-nav__toggle {
   display: block;
+  position: absolute;
+  top: 21px;
+  right: 20px;
   margin: 0;
   padding: 0;
-  z-index: 2;
   width: 50px;
   height: 24px;
   background: transparent;
@@ -17,11 +22,12 @@
   cursor: pointer;
 }
 
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+
 .main-nav--closed .main-nav__toggle {
   content: "";
-  position: absolute;
-  top: 21px;
-  right: 20px;
   width: 50px;
   height: 3px;
   background-color: @white-bgcolor;
@@ -39,10 +45,6 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  position: absolute;
-  top: 21px;
-  right: 19px;
-
   &::before,
   &::after {
     content: "";
@@ -74,5 +76,35 @@
   &:hover::before,
   &:hover::after {
     background-color: @support-bgcolor;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    top: 45px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 173px;
+  }
+
+  .main-nav__list {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    text-transform: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }

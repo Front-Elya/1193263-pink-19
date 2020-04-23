@@ -1,15 +1,22 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   position: relative;
   background-color: @dominate-bgcolor;
 }
 
 .page-header__logo {
-  display: inline-block;
-  vertical-align: baseline;
-  margin-top: 22px;
-  margin-bottom: 19px;
+  height: 66px;
   margin-left: 20px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
 
   &:hover path {
     fill: @support-bgcolor;
@@ -18,5 +25,26 @@
   &:active path {
     fill: @white-bgcolor;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    width: 147px;
+    height: 109px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding: 0 130px 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    height: 110px;
+    margin: 0;
+    padding: 0;
   }
 }
