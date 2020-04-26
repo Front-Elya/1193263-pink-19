@@ -35,3 +35,24 @@
   line-height: 30px;
   color: @main-textcolor;
 }
+
+@media (min-width: @tablet-width) {
+  .comment-form {
+    width: 616px;
+    border: 1px solid @border-color;
+  }
+
+  .comment-form__text {
+    width: 496px;
+    margin-bottom: 53px;
+  }
+
+  .comment-form__label {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+    background-color: @white-bgcolor;
+  }
+}

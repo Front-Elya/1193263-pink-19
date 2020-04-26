@@ -24,7 +24,7 @@
 }
 
 .competitive-form__text {
-  margin: 0;
+  margin: 0 auto;
   padding: 49px 25px;
   text-align: center;
   line-height: 30px;
@@ -74,4 +74,55 @@
 
 .competitive-form__button:disabled {
   background-color: @disabled-color;
+}
+
+@media (min-width: @tablet-width) {
+  .competitive-form__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competitive-form__item {
+    display: block;
+
+    &:last-child {
+      order: 1;
+    }
+  }
+
+  .competitive-form__form {
+    width: 616px;
+    margin: 0 auto;
+  }
+
+  .competitive-form__title {
+    padding: 180px 46px 87px;
+    margin-top: -110px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .competitive-form__text {
+    width: 480px;
+    padding: 100px 0 76px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .comment-form__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .competitive-form__button {
+    width: 296px;
+    height: 59px;
+    margin: 0;
+  }
+
+  .competitive-form__explanation {
+    padding: 0;
+  }
 }

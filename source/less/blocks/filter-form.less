@@ -28,12 +28,33 @@
 .filter-form__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 42px;
-  padding-left: 20px;
-  padding-right: 20px;
   font-size: 14px;
   line-height: 18px;
   color: @support-textcolor;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-form {
+    position: relative;
+    padding: 0;
+    margin-bottom: 59px;
+    background-color: @white-bgcolor;
+  }
+
+  .filter-form__list {
+    padding: 0;
+    padding-left: 60px;
+    padding-top: 36px;
+    border: 1px solid @border-color;
+  }
+
+  .filter-form__title {
+    width: 436px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    background-color: @white-bgcolor;
+  }
 }

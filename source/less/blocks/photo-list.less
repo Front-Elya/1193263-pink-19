@@ -131,11 +131,11 @@
   .photo-list__item {
     width: 300px;
     margin-bottom: 20px;
-  }
 
-  .photo-list__item--panorama {
-    width: 100%;
-    margin-bottom: 50px;
+    &--panorama {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   .photo-list__description {
@@ -178,20 +178,10 @@
 }
 
 @media (min-width: @desktop-width) {
-  .photo-list {
-    width: 940px;
-    margin: 0 auto;
-  }
-
   .photo-list__item {
     margin-bottom: 54px;
     font-size: 14px;
     line-height: 24px;
-
-    &--panorama {
-      width: 100%;
-      margin-bottom: 50px;
-    }
   }
 
   .photo-list__description {

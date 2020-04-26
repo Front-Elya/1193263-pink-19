@@ -22,6 +22,10 @@
   text-transform: uppercase;
 }
 
+.personal-form__title {
+  display: none;
+}
+
 .personal-form__input {
   min-height: 59px;
   width: 100%;
@@ -48,5 +52,66 @@
 
   &:focus {
     border: 2px solid @support-bgcolor;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .personal-form {
+    margin: 0;
+    padding: 0;
+
+    &--contacts {
+      border: 1px solid @border-color;
+    }
+  }
+
+  .personal-form__tel,
+  .personal-form__email {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-left: 18px;
+      order: 2;
+    }
+  }
+
+  .personal-form__title {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: @support-textcolor;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: -10px;
+    background-color: @white-bgcolor;
+  }
+
+  .personal-form__label {
+    margin: 0;
+    padding: 0;
+    margin-right: 21px;
+  }
+
+  .personal-form__input {
+    margin-bottom: 0;
+
+    &--tel,
+    &--email {
+      width: 496px;
+      margin: 0 auto;
+    }
+  }
+
+  .personal-form__wrapper {
+    margin: 0;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
