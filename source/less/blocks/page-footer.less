@@ -2,6 +2,10 @@
   margin: 0 auto;
   padding: 20px 75px 30px 73px;
   background-color: @white-bgcolor;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .page-footer__logo {
@@ -9,7 +13,7 @@
   width: 147px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 
   &:hover path {
     fill: @support-bgcolor;
@@ -22,10 +26,18 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-footer__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 42px;
+    padding-bottom: 39px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 40px 20px 50px;
     position: relative;
   }
 
@@ -36,7 +48,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer {
-    padding: 105px 130px 74px;
+  .page-footer__wrapper {
+    width: 940px;
+    padding-top: 70px;
+    padding-bottom: 74px;
   }
 }

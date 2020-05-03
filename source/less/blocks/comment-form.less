@@ -1,10 +1,7 @@
 .comment-form {
   margin: 0;
-  padding: 0;
-  padding-right: 22px;
-  padding-left: 22px;
-  padding-top: 41px;
-  margin-bottom: 52px;
+  padding: 33px 22px 0;
+  margin-bottom: 45px;
   text-align: center;
 }
 
@@ -24,14 +21,46 @@
   min-height: 197px;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
+  margin-top: 11px;
+  padding-top: 15px;
   padding-right: 20px;
   padding-left: 19px;
   box-sizing: border-box;
-  border: 2px solid @border-color;
+  border: 1px solid @border-color;
   resize: none;
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: @main-textcolor;
+}
+
+@media (min-width: @tablet-width) {
+  .comment-form {
+    border: 1px solid @border-color;
+    padding: 25px 60px 53px;
+  }
+
+  .comment-form__label {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+    background-color: @white-bgcolor;
+  }
+
+  .comment-form__footer {
+    width: 618px;
+    margin: 0 auto;
+    padding-bottom: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment-form__footer {
+    width: 940px;
+  }
 }

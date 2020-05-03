@@ -10,7 +10,6 @@
   margin: 0 auto;
   padding: 0;
   padding-top: 46px;
-  padding-bottom: 56px;
 }
 
 .advantages__main-title p {
@@ -22,32 +21,62 @@
 }
 
 .advantages__main-title p:first-child {
-  margin-bottom: 30px;
+  margin-bottom: 39px;
+}
+
+.advantages__text {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__item {
   width: 280px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
+
+  &:nth-child(2) {
+    margin-bottom: 35px;
+  }
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
+  padding-top: 27px;
   padding-bottom: 280px;
+  position: relative;
   list-style: none;
   background-color: @main-bgcolor;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: bottom -40px center;
   overflow: hidden;
+
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 94.074px;
+    top: -55px;
+    position: relative;
+    background-color: transparent;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .advantages__title {
   margin: 0;
   padding: 0;
+  margin-bottom: 10px;
   font-family: "OpenSans Bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -62,12 +91,12 @@
   .advantages__main-title {
     width: 590px;
     padding-top: 78px;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
   }
 
   .advantages__main-title p {
     font-size: 40px;
-    line-height: 40px;
+    line-height: normal;
   }
 
   .advantages__main-title p:first-child {
@@ -82,7 +111,20 @@
   .advantages__wrapper {
     margin: 0 auto;
     padding: 0;
+    position: relative;
     background-color: @main-bgcolor;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 94px;
+      top: -2px;
+      background-color: transparent;
+      background-image: url("../img/bg-triangle-white.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .advantages__list {
@@ -95,6 +137,7 @@
     padding-left: 312px;
     padding-bottom: 0;
     background-image: none;
+    background-color: transparent;
 
     &::before {
       content: "";
@@ -127,12 +170,20 @@
     line-height: 50px;
   }
 
+  .advantages__wrapper {
+    &::before {
+      content: "";
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
   .advantages__list {
-    width: auto;
+    width: 829px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
-    padding: 0 184px;
+    padding: 0;
 
     &::before {
       content: "";
@@ -141,7 +192,7 @@
   }
 
   .advantages__item {
-    width: 236px;
+    width: auto;
     margin-bottom: 70px;
     text-align: center;
 

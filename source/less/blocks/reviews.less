@@ -1,23 +1,21 @@
 .reviews {
   margin: 0;
   padding: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
   background-color: @white-bgcolor;
 }
 
 .reviews__list {
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   padding: 0;
-  padding-left: 22px;
-  padding-right: 22px;
   list-style: none;
 }
 
 .reviews__name {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-family: "OpenSans Bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -25,12 +23,110 @@
   text-align: center;
 }
 
+.reviews__characteristics {
+  display: none;
+}
+
 .reviews__text {
   margin: 0;
   padding: 0;
-  margin-bottom: 42px;
+  margin-bottom: 33px;
   font-family: "OpenSans", "Arial", sans-serif;
   line-height: 30px;
   color: @main-textcolor;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__name {
+    order: 2;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 49px;
+  }
+
+  .reviews__characteristics {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-weight: 400;
+    color: @main-textcolor;
+  }
+
+  .reviews__list {
+    width: 617px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__name {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .reviews__characteristics {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .reviews__list {
+    width: 685px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 79px;
+      height: 63px;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 58px;
+      position: relative;
+      left: 306px;
+      background-image: url("../img/icon-quot.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .reviews__text {
+    position: relative;
+    margin-bottom: 44px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: -105px;
+      width: 22px;
+      height: 41px;
+      background-image: url("../img/icon-review-arrow-left.svg");
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.3;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 771px;
+      width: 22px;
+      height: 41px;
+      background-image: url("../img/icon-review-arrow-right.svg");
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.3;
+    }
+  }
 }

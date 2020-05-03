@@ -1,38 +1,46 @@
 .competitive-form {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: @white-bgcolor;
 }
 
+.competitive-form__background {
+  width: auto;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .competitive-form__title {
+  width: 230px;
   margin: 0 auto;
-  padding: 95px 46px 87px;
+  padding: 100px 0 50px;
   margin-top: -70px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-weight: 300;
   font-size: 24px;
   color: @dominate-textcolor;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .competitive-form__item {
+  position: relative;
   border: 0;
 }
 
 .competitive-form__text {
-  margin: 0;
-  padding: 49px 25px;
+  width: 275px;
+  margin: 0 auto;
+  padding: 45px 0 35px;
   text-align: center;
   line-height: 30px;
 }
 
 .competitive-form__explanation {
   margin: 0;
-  padding: 46px 19px;
+  padding: 30px 19px 35px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
@@ -74,4 +82,81 @@
 
 .competitive-form__button:disabled {
   background-color: @disabled-color;
+}
+
+@media (min-width: @tablet-width) {
+  .competitive-form__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competitive-form__item--name {
+    order: 0;
+  }
+
+  .competitive-form__item--app {
+    order: 1;
+  }
+
+  .competitive-form__item--contact {
+    order: 2;
+  }
+
+  .competitive-form__item--achievment {
+    order: 3;
+  }
+
+  .competitive-form__form {
+    padding: 0 22px;
+  }
+
+  .competitive-form__title {
+    width: 480px;
+    padding: 180px 0 87px;
+    margin-top: -110px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .competitive-form__text {
+    width: 480px;
+    padding: 100px 0 76px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .competitive-form__button {
+    width: 296px;
+    height: 59px;
+    margin: 0;
+  }
+
+  .competitive-form__explanation {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competitive-form__form {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .competitive-form__title {
+    width: 750px;
+    padding: 183px 0 100px;
+  }
+
+  .competitive-form__text {
+    width: 758px;
+  }
+
+  .competitive-form__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
