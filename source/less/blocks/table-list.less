@@ -1,6 +1,7 @@
 .table-list {
   margin: 0;
-  margin-bottom: 45px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   margin-left: -535px;
   color: @dominate-textcolor;
   background-color: @main-bgcolor;
@@ -13,7 +14,7 @@
 .table-list__tariff {
   margin: 0;
   padding: 0;
-  padding-top: 23px;
+  padding-top: 20px;
   padding-bottom: 21px;
   font-family: "OpenSans Bold", "Arial", sans-serif;
   font-size: 18px;
@@ -34,14 +35,15 @@
 }
 
 .table-list__sticker {
-  height: 35px;
+  height: 30px;
   width: 140px;
   background-color: @support-bgcolor;
   position: absolute;
-  top: 10px;
-  right: 170px;
+  top: 13px;
+  right: 185px;
   transform: rotate(-45deg);
   text-transform: uppercase;
+  font-size: 14px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-weight: 300;
   text-align: center;
@@ -50,7 +52,6 @@
 .table-list__header {
   margin: 0;
   padding: 0;
-  margin-bottom: 12px;
 }
 
 .table-list__price {
@@ -64,7 +65,7 @@
 
 .table-list__decoration {
   margin: 0;
-  padding: 23px 0;
+  padding: 15px 0;
   font-family: "OpenSans", "Arial", sans-serif;
   color: @main-textcolor;
   border: 2px solid @border-color;
@@ -110,6 +111,7 @@
   .table-list {
     margin: 0 auto;
     padding: 0;
+    margin-top: 20px;
     margin-left: auto;
   }
 
@@ -127,7 +129,8 @@
   }
 
   .table-list__sticker {
-    height: 30px;
+    font-size: 14px;
+    height: 25px;
     width: 140px;
     top: 5px;
     right: 65px;
@@ -161,6 +164,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .table-list {
+    margin-top: 50px;
+  }
+
   .table-list__wrapper {
     width: 233px;
   }
@@ -171,9 +178,8 @@
   }
 
   .table-list__sticker {
-    font-size: 14px;
     line-height: 30px;
-    font-weight: 600px;
+    font-weight: 600;
     width: 140px;
     top: 5px;
     right: 135px;

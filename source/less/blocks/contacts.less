@@ -6,18 +6,18 @@
 }
 
 .contacts__wrapper {
-  margin: 0;
+  width: 237px;
+  margin: 0 auto;
   padding: 0;
-  padding-top: 50px;
-  padding-right: 39px;
-  padding-bottom: 50px;
-  padding-left: 34px;
+  padding-top: 42px;
+  margin-bottom: 35px;
+  z-index: 2;
 }
 
 .contacts__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
+  margin-bottom: 35px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -43,12 +43,20 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   font-family: "OpenSans Light", sans-serif;
   font-size: 24px;
   line-height: 30px;
   text-decoration: none;
   color: @support-textcolor;
+}
+
+.contacts__email {
+  margin-bottom: 28px;
+}
+
+.contacts__address {
+  margin-bottom: 0;
 }
 
 .contacts__phone,
@@ -66,8 +74,25 @@
 
 .contacts__map {
   position: relative;
+  height: 229px;
+  overflow: hidden;
 
   &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 123px;
+    position: absolute;
+    top: -2px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: transparent;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  &::after {
     content: "";
     display: block;
     width: 36px;
@@ -88,7 +113,12 @@
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 56px 0;
+    padding: 0;
+    padding-top: 56px;
+    width: auto;
+    margin: 0;
+    margin-left: 67px;
+    margin-right: 51px;
   }
 
   .contacts__title {
@@ -100,14 +130,12 @@
   }
 
   .contacts__list {
+    width: 542px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-
-  .contacts__item {
-    width: 50%;
   }
 
   .contacts__item:last-child {
@@ -127,12 +155,19 @@
     width: 220px;
     margin: 0 auto;
   }
+
+  .contacts__map {
+    height: 522px;
+
+    &::before {
+      top: 0;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts__list {
     width: 861px;
-    margin: 0 auto;
   }
 
   .contacts__item {
@@ -141,6 +176,13 @@
 
     &:nth-child(2) {
       order: 3;
+    }
+  }
+
+  .contacts__map {
+    &::before {
+      content: "";
+      height: 123px;
     }
   }
 }
