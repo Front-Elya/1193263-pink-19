@@ -3,11 +3,11 @@
   flex-direction: column;
   margin: 0 auto;
   position: relative;
-  background-color: @dominate-bgcolor;
 }
 
 .page-header__logo {
   height: 66px;
+  width: 75px;
   margin-left: 20px;
   position: relative;
 
@@ -28,10 +28,26 @@
   }
 }
 
+.page-header__logo-tablet {
+  display: none;
+}
+
+.page-header__logo-desktop {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-header__logo {
     width: 147px;
     height: 109px;
+  }
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: inline-block;
   }
 }
 
@@ -56,5 +72,13 @@
     height: 110px;
     margin: 0;
     padding: 0;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-desktop {
+    display: inline-block;
   }
 }
