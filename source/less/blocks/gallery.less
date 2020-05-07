@@ -12,6 +12,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   p {
     width: 168px;
     margin: 0 auto;
@@ -50,6 +54,10 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+
     p {
       width: 348px;
       font-size: 50px;
@@ -76,6 +84,10 @@
     margin-top: -110px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .gallery__text {
