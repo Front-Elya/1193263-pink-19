@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-bottom: 47px;
+  margin-bottom: 35px;
 }
 
 .radiobutton__input {
@@ -14,6 +14,7 @@
 }
 
 .radiobutton__label {
+  line-height: 40px;
   margin-left: 67px;
   position: relative;
 
@@ -51,8 +52,29 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+ .radiobutton__label {
+  margin-left: 58px;
+
+  &::before {
+    left: -60px;
+  }
+ }
+
+ .radiobutton__input:checked + .radiobutton__label {
+    &::after {
+      content: "";
+      left: -48px;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .radiobutton {
-    margin-bottom: 50px;
+    margin-bottom: 33px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

@@ -6,7 +6,7 @@
 
 .gallery__title {
   margin: 0;
-  padding: 95px 0 87px;
+  padding: 100px 0 82px;
   margin-top: -70px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -24,23 +24,24 @@
     font-weight: 300;
     font-size: 24px;
     color: @dominate-textcolor;
-    line-height: 24px;
+    line-height: 30px;
     text-align: center;
   }
 }
 
 .gallery__text {
   width: 245px;
-  margin: 56px auto;
+  margin: 45px auto 50px;
   padding: 0;
   text-align: center;
   line-height: 30px;
 }
 
 .gallery__text:last-child {
-  width: 253px;
+  width: 255px;
   margin: 0 auto;
-  padding: 49px 0;
+  padding: 19px 0 42px;
+  white-space: pre-line;
 }
 
 .gallery__list {
@@ -50,9 +51,12 @@
 
 @media (min-width: @tablet-width) {
   .gallery__title {
-    padding: 130px 0 150px;
+    padding: 180px 0 140px;
+    margin-top: -110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 1200px auto;
+    background-position-x: center;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -61,37 +65,51 @@
     p {
       width: 348px;
       font-size: 50px;
-      line-height: 50px;
+      line-height: 60px;
     }
   }
 
   .gallery__text {
     width: 440px;
-    margin: 100px auto 80px;
+    margin: 94px auto 75px;
     font-size: 18px;
     line-height: 30px;
 
     &:last-child {
-      width: 420px;
+      width: 430px;
       margin: 0 auto;
+      padding: 50px 0 68px;
+      white-space: normal;
+
+       span {
+         display: block;
+         margin: 0 auto;
+         width: 418px;
+       }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .gallery__title {
-    padding: 150px 0 111px;
+    padding: 170px 0 105px;
     margin-top: -110px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 2560px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
     }
   }
 
   .gallery__text {
-    width: 568px;
-    margin: 100px auto 92px;
+    width: 580px;
+    margin: 90px auto;
+
+    &:last-child {
+      padding: 2px 0 70px;
+    }
   }
 }

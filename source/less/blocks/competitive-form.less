@@ -5,10 +5,12 @@
 }
 
 .competitive-form__background {
-  width: auto;
+  width: 100%;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-position-y: 0;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -36,17 +38,25 @@
 .competitive-form__text {
   width: 275px;
   margin: 0 auto;
-  padding: 45px 0 35px;
+  padding: 48px 0 35px;
   text-align: center;
   line-height: 30px;
+
+  span {
+    display: none;
+  }
 }
 
 .competitive-form__explanation {
   margin: 0;
-  padding: 30px 19px 35px;
+  padding: 30px 19px 18px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.competitive-form__explanation-full {
+  display: none;
 }
 
 .competitive-form__asterisk {
@@ -90,6 +100,8 @@
 @media (min-width: @tablet-width) {
   .competitive-form__background {
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position-y: auto;
+    background-size: 1200px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -118,38 +130,45 @@
   }
 
   .competitive-form__form {
-    padding: 0 22px;
+    padding: 0 21px;
   }
 
   .competitive-form__title {
     width: 480px;
-    padding: 133px 0 87px;
+    padding: 180px 0 80px;
     margin-top: -110px;
     font-size: 50px;
     line-height: 60px;
   }
 
   .competitive-form__text {
-    width: 480px;
-    padding: 100px 0 76px;
+    width: 500px;
+    padding: 92px 0 68px;
     font-size: 18px;
     line-height: 30px;
+
+    span {
+      display: inline;
+    }
   }
 
   .competitive-form__button {
-    width: 296px;
-    height: 59px;
+    width: 298px;
+    height: 64px;
     margin: 0;
   }
 
   .competitive-form__explanation {
     padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .competitive-form__background {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 2560px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -164,11 +183,12 @@
 
   .competitive-form__title {
     width: 750px;
-    padding: 183px 0 100px;
+    padding: 170px 0 105px;
   }
 
   .competitive-form__text {
     width: 758px;
+    padding-bottom: 60px;
   }
 
   .competitive-form__list {
@@ -177,5 +197,20 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .competitive-form__explanation {
+    display: none;
+  }
+
+  .competitive-form__explanation-full {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
   }
 }

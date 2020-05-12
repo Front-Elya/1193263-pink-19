@@ -1,6 +1,6 @@
 .upload-photo {
   margin: 0 auto;
-  padding: 20px 20px 41px 18px;
+  padding: 20px 20px 40px 18px;
   background-color: @main-bgcolor;
 }
 
@@ -13,17 +13,17 @@
 
 .upload-photo__image {
   margin: 0 auto;
-  margin-bottom: 42px;
+  margin-bottom: 35px;
 }
 
 .upload-photo__list {
-  width: 230px;
+  width: 210px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 39px;
+  margin-bottom: 35px;
   list-style: none;
 }
 
@@ -65,7 +65,7 @@
     width: 240px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 73px;
+    margin-bottom: 71px;
   }
 }
 
@@ -86,7 +86,7 @@
   width: 281px;
   display: block;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 10px 0;
   box-sizing: border-box;
 
   &--post {
@@ -129,8 +129,8 @@
   }
 
   .upload-photo__form {
-    width: 610px;
-    margin: 57px auto;
+    width: 620px;
+    margin: 57px auto 46px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -138,7 +138,7 @@
 
   .upload-photo__list {
     width: 260px;
-    min-height: 198px;
+    min-height: 165px;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -146,7 +146,7 @@
   }
 
   .upload-photo__item {
-    width: 260px;
+    width: 256px;
     margin-left: auto;
     display: flex;
     flex-direction: row;
@@ -156,6 +156,9 @@
 
   .upload-photo__wrapper {
     width: 260px;
+    margin-top: 10px;
+    margin-right: 18px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,12 +174,12 @@
 
     &::after {
       content: "";
+      width: 272px;
       display: block;
       position: relative;
-      top: 20px;
+      top: 33px;
       left: -55px;
       height: 1px;
-      width: 275px;
       background-color: rgba(@main-textcolor, 0.1);
     }
   }
@@ -214,7 +217,7 @@
   }
 
   .upload-photo__button {
-    width: 260px;
+    width: 262px;
 
     &--post {
       margin-bottom: 24px;
@@ -224,9 +227,9 @@
 
 @media (min-width: @desktop-width) {
   .upload-photo__form {
-    margin: 0 auto;
-    padding: 57px 60px 57px 60px;
     width: 940px;
+    margin: 0 auto;
+    padding: 55px 40px 48px 80px;
     background-color: @main-bgcolor;
   }
 
@@ -240,6 +243,7 @@
 
   .upload-photo__list {
     width: 410px;
+    height: 196px;
   }
 
   .upload-photo__item {
@@ -250,6 +254,9 @@
 
   .upload-photo__wrapper {
     width: 410px;
+    margin-top: -4px;
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
 
   .upload-photo__rangeitem {
@@ -260,6 +267,10 @@
       top: 30px;
       left: -90px;
       width: 410px;
+    }
+
+    &:last-child {
+      margin-top: -6px;
     }
   }
 
@@ -289,6 +300,7 @@
     &--color svg {
       width: 48px;
       height: 43px;
+      margin-top: 5px;
     }
 
     &--contrast svg {
