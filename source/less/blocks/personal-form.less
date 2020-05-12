@@ -9,7 +9,7 @@
 
   &--contacts {
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 28px;
   }
 }
 
@@ -62,9 +62,12 @@
     margin: 0;
     padding: 0;
 
+    &--name {
+      margin-bottom: 6px;
+    }
+
     &--contacts {
       border: 1px solid @border-color;
-      margin-bottom: 49px;
     }
   }
 
@@ -80,7 +83,7 @@
   }
 
   .personal-form__tel {
-    margin: 40px 60px;
+    margin: 25px 58px;
     position: relative;
 
     &::after {
@@ -97,7 +100,7 @@
   }
 
   .personal-form__email {
-    margin: 0 60px 33px;
+    margin: 0 58px 25px;
     position: relative;
 
     &::after {
@@ -133,11 +136,11 @@
     padding: 0;
 
     &--name {
-      margin-right: 22px;
+      margin-right: 18px;
     }
 
     &--contacts {
-      margin-top: 10px;
+      margin-top: 8px;
       padding-left: 18px;
     }
   }
@@ -148,7 +151,7 @@
 
   .personal-form__wrapper {
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 43px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -158,12 +161,16 @@
 @media (min-width: @desktop-width) {
   .personal-form {
     &--name {
+      margin-bottom: 70px;
       flex-grow: 2;
     }
 
     &--contacts {
       flex-grow: 1;
     }
+  }
+  .personal-form__input{
+    margin-top: 0;
   }
 
   .personal-form__inputwrapper {
@@ -174,16 +181,30 @@
   }
 
   .personal-form__wrapper {
-    margin-bottom: 58px;
+    margin-bottom: 47px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .personal-form__tel {
     flex-grow: 2;
     margin-right: 74px;
+    margin-bottom: 15px;
+
+    &::after {
+      top: 2px;
+    }
   }
 
   .personal-form__email {
     flex-grow: 2;
     margin-left: 0;
+    margin-bottom: 15px;
+
+    &::after {
+      top: 2px;
+    }
   }
 }

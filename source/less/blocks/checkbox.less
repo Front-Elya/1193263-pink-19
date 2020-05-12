@@ -49,3 +49,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: @tablet-width) {
+  .checkbox__label {
+    &::before {
+      content: "";
+      left: -60px;
+    }
+  }
+}

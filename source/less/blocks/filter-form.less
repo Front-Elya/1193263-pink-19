@@ -3,11 +3,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0 22px;
-  padding-top: 40px;
   background-color: @main-bgcolor;
 
+  &--achievment {
+    padding-top: 35px;
+  }
+
   &--app {
-    padding-top: 41px;
+    padding-top: 37px;
+    padding-bottom: 5px;
   }
 }
 
@@ -47,8 +51,12 @@
   .filter-form {
     position: relative;
     padding: 0;
-    margin-bottom: 59px;
+    margin-bottom: 65px;
     background-color: @white-bgcolor;
+
+    &--achievment {
+      padding-top: 48px;
+    }
   }
 
   .filter-form__list {
@@ -56,14 +64,26 @@
     padding-left: 60px;
     padding-top: 36px;
     border: 1px solid @border-color;
+
+    &--app {
+      padding: 52px 0 20px 60px;
+    }
+
+    &--achievment {
+      padding: 60px 0 0 54px;
+    }
   }
 
   .filter-form__title {
-    width: 436px;
+    width: 380px;
     margin: 0 auto;
     position: relative;
-    top: 10px;
+    top: 11px;
     background-color: @white-bgcolor;
+
+    &--achievment {
+      width: 430px;
+    }
   }
 }
 
@@ -73,7 +93,7 @@
       width: 341px;
       margin: 0;
       margin-left: 74px;
-      margin-bottom: 58px;
+      margin-bottom: 70px;
       flex-grow: 2;
     }
   }
@@ -81,15 +101,16 @@
   .filter-form__list {
     &--achievment {
       height: 228px;
-      padding-top: 47px;
+      padding-top: 55px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
     }
 
     &--app {
-      padding-left: 75px;
-      padding-top: 56px;
+      padding-left: 78px;
+      padding-top: 55px;
+      padding-bottom: 55px;
     }
   }
 
@@ -97,6 +118,10 @@
     &--app {
       width: 355px;
       top: 8px;
+    }
+
+    &--achievment {
+      top: 6px;
     }
   }
 }

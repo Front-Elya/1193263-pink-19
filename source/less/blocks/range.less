@@ -24,22 +24,26 @@
   }
 
   &--crop {
-    right: 30px;
+    right: 35px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .range__scale {
-    width: 202px;
+    width: 200px;
   }
 
   .range__toggle {
+    &--crop {
+      right: 40px;
+    }
+
     &--fill {
-      left: 30px;
+      right: 160px;
     }
 
     &--contrast {
-      left: 101px;
+      right: 90px;
     }
   }
 }
@@ -47,5 +51,19 @@
 @media (min-width: @desktop-width) {
   .range__scale {
     width: 288px;
+  }
+
+  .range__toggle {
+    &--crop {
+      right: 205px;
+    }
+
+    &--fill {
+      right: 25px;
+    }
+
+    &--contrast {
+      right: 114px;
+    }
   }
 }
