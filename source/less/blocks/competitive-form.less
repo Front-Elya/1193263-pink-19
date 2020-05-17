@@ -91,16 +91,16 @@
     color: rgba(@dominate-textcolor, 0.3);
     background-color: @fbhover-color;
   }
-}
 
-.competitive-form__button:disabled {
-  background-color: @disabled-color;
+  &:disabled {
+    color: @dominate-textcolor;
+    background-color: @disabled-color;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .competitive-form__background {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position-y: auto;
     background-size: 1200px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {

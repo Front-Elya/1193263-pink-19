@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -136,7 +136,7 @@
             <div class="personal-form__inputwrapper">
               <div class="personal-form__tel">
                 <label class="personal-form__label personal-form__label--contacts" for="user-phone">Номер телефона:</label>
-                <input class="personal-form__input personal-form__input--tel" id="user-phone" type="tel" name="user-phone" placeholder="Номер, пожалуйста">
+                <input class="personal-form__input personal-form__input--tel" id="user-phone" type="tel" name="user-phone" placeholder="Номер, пожалуйста" required>
               </div>
               <div class="personal-form__email">
                 <label class="personal-form__label personal-form__label--contacts " for="user-email">Адрес почты:</label>
@@ -183,20 +183,26 @@
       <!--popup-1-->
       <section class="popup popup--warning">
         <h2 class="visually-hidden">Предупреждение</h2>
-        <b class="popup__title">Что-то пошло не так!</b>
-        <p class="popup__text popup__text--warning">
-        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
-        <button class="popup__button popup__button--warning competitive-form__button" type="button">Ок</button>
+        <div class="popup__wrapper">
+          <b class="popup__title">Что-то пошло не так!</b>
+          <p class="popup__text popup__text--warning">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+        </div>
+        <div class="popup__button-substratefull">
+          <button class="popup__button popup__button--warning competitive-form__button" type="button">Ок</button>
+        </div>
       </section>
       <!--popup-2-->
       <section class="popup popup--successful">
         <h2 class="visually-hidden">Успешная отправка формы</h2>
-        <div class="popup__text-substrate">
-          <b class="popup__title">Ваша заявка отправлена</b>
-          <p class="popup__text popup__text--successful">
-          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
-          </p>
+        <div class="popup__wrapper popup__wrapper--successful">
+          <div class="popup__text-substrate">
+            <b class="popup__title">Ваша заявка отправлена</b>
+            <p class="popup__text popup__text--successful">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и
+            оповестим вас.
+            </p>
+          </div>
         </div>
         <div class="popup__button-substrate">
           <button class="popup__button popup__button--successful competitive-form__button" type="button">Закрыть окно</button>

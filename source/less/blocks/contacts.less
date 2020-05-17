@@ -93,19 +93,6 @@
     background-size: cover;
     z-index: 1;
   }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 36px;
-    height: 35px;
-    position: absolute;
-    left: 45%;
-    top: 40%;
-    background-image: url("../img/icon-map-marker.svg");
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
 }
 
 .contacts__map iframe {
@@ -195,7 +182,7 @@
 
   .contacts__item {
     width: auto;
-    flex-grow: none;
+    flex-grow: initial;
 
     &:nth-child(2) {
       order: 3;
